@@ -19,8 +19,10 @@ phases:
 
   build:
     commands:
-      - docker pull public.ecr.aws/x4m9m0g8/whisper-lambda:$MODEL_TAG
-      - docker tag public.ecr.aws/x4m9m0g8/whisper-lambda:$MODEL_TAG $ECR_URI
+      - 770324277004.dkr.ecr.us-east-1.amazonaws.com/madison604/whisper-lambda:$MODEL_TAG
+      #- docker pull public.ecr.aws/x4m9m0g8/whisper-lambda:$MODEL_TAG
+      - 770324277004.dkr.ecr.us-east-1.amazonaws.com/madison604/whisper-lambda:MODEL_TAG $ECCR_URI
+      #- docker tag public.ecr.aws/x4m9m0g8/whisper-lambda:$MODEL_TAG $ECR_URI
       - docker push $ECR_URI
 
   post_build:
